@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "606216896369",
+    "firebase_url": "https://sociohu.firebaseio.com",
+    "project_id": "sociohu",
+    "storage_bucket": "sociohu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606216896369:android:908880193819dd24",
+        "android_client_info": {
+          "package_name": "com.example.hp.sociohub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606216896369-bg35de3l4522jld0ngjsdic3j0bsnl5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRjazA-MaxhzKzCOR9tZMcCB-YubiXcXc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

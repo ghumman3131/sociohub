@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hp.sociohub.MainActivity"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fcf8f8">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/top_bar"
+        >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:onClick="open_drawer"
+        android:src="@drawable/ic_lines"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOCIO-HUB"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:padding="15dp"/>
+
+
+</LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#f4f1f1"
+            android:padding="10dp"
+            android:weightSum="4"
+            android:id="@+id/add_network_layout"
+            android:layout_below="@+id/top_bar">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_action_add"
+             android:onClick="next_page"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add social networks"
+                android:textColor="#000"
+                android:textSize="17dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_stream"
+                android:onClick="next_page1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add streams"
+                android:textSize="17dp"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/add_network_layout"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CURRENTLY LOOGED IN ACCOUNTS"
+                android:textColor="#000"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_facebook_disable"
+                    android:id="@+id/facebook_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/facebook_logged_in_as"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_instagram_disable"
+                    android:id="@+id/instagram_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/instagram_logged_in_as"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_twitter_disable"
+                    android:id="@+id/twitter_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/twitter_logged_in_as"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_linkedin_disable"
+                    android:id="@+id/linkedin_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/linkedin_logged_in_as"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:weightSum="2"
+             android:layout_alignParentBottom="true"
+             android:padding="7dp">
+
+
+              <Button
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="MAKE NEW POST"
+                  android:textStyle="bold"
+                  android:textSize="20dp"
+                  android:background="#e41515"
+                  android:textColor="#000"
+                  android:padding="10dp"
+                  android:layout_weight="1"
+                  android:onClick="make_all_post"
+
+                  />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRENDING"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="#e41515"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            />
+
+         </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#edd7cece"
+        android:layout_gravity="left"
+        android:weightSum="4"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/bablu"
+            android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="INSTAGRAM"
+        android:textStyle="bold"
+        android:textColor="#f4efef"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="open_instagram"
+        android:background="#c94d4d"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/bab"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="FACEBOOK"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#f4efef"
+            android:layout_weight="1"
+            android:onClick="open_facebook"
+            android:background="#3854a3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/hjhhj"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="TWITTER"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#f4efef"
+            android:layout_weight="1"
+            android:onClick="open_twitter"
+            android:background="#48c8f2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/hjhhj"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="LINKEDIN"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#f4efef"
+            android:layout_weight="1"
+            android:onClick="open_linkedin"
+            android:background="#4274d1"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bebdbd"
+    android:padding="5dp"
+    tools:context="com.example.hp.sociohub.UserProfile2">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="70dp"
+     android:weightSum="6"
+     android:background="#c6c3c3"
+     android:padding="10dp"
+     android:id="@+id/line1">
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/ic_action_name"
+       android:padding="7dp"
+       android:background="#e9e3e3"
+       android:layout_weight="1"/>
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="#e9e3e3"
+         android:layout_weight="1"
+         android:text="HOME"
+         android:padding="10dp"
+         android:textColor="#000000"/>
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="#e9e3e3"
+           android:src="@drawable/ic_action_name2"
+           android:padding="7dp"
+           android:layout_weight="1"
+/>
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="#e9e3e3"
+         android:layout_weight="1"
+         android:text="MENTIONS"
+         android:padding="10dp"
+         android:textColor="#000000"
+         android:layout_marginLeft="7dp"/>
+
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="#e9e3e3"
+         android:layout_weight="1"
+         android:text="RETWEETS"
+         android:padding="10dp"
+         android:textColor="#000000"
+         android:layout_marginLeft="7dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="3"
+        android:background="#aca9a9"
+        android:padding="10dp"
+        android:id="@+id/line2"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="FOLLOWERS"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="INBOX"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="7dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="LINKS"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="7dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="3"
+        android:background="#aca9a9"
+        android:padding="10dp"
+        android:id="@+id/line3"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="LIKES"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="OUTBOX"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="7dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="MY TWEETS"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="7dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="5"
+        android:background="#aca9a9"
+        android:padding="10dp"
+        android:layout_below="@+id/line3"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="SEARCH"
+            android:padding="10dp"
+            android:textColor="#000000"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#e9e3e3"
+            android:layout_weight="1"
+            android:text="SCHEDULED"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="7dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
