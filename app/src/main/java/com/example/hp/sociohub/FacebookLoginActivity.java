@@ -26,7 +26,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
-public class Home_page extends AppCompatActivity {
+public class FacebookLoginActivity extends AppCompatActivity {
 
     CallbackManager callbackManager;
 
@@ -34,12 +34,6 @@ public class Home_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
-        get_logged_in_user_info();
-
-
-
-
 
 
         Button logout_btn = findViewById(R.id.logout_btn);
@@ -64,16 +58,16 @@ public class Home_page extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 // App code
 
-                Toast.makeText(Home_page.this, "login successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FacebookLoginActivity.this, "login successfully", Toast.LENGTH_SHORT).show();
 
-                get_logged_in_user_info();
+                finish();
             }
 
             @Override
             public void onCancel() {
                 // App code
 
-                Toast.makeText(Home_page.this, "canceled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FacebookLoginActivity.this, "canceled", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -81,7 +75,7 @@ public class Home_page extends AppCompatActivity {
             public void onError(FacebookException exception) {
                 // App code
 
-                Toast.makeText(Home_page.this, "error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FacebookLoginActivity.this, "error", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -172,13 +166,13 @@ public class Home_page extends AppCompatActivity {
             @Override
             public void onFailure()
             {
-                Toast.makeText( Home_page.this, "Could not log in.", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( FacebookLoginActivity.this, "Could not log in.", Toast.LENGTH_SHORT ).show();
             }
 
             @Override
             public void onError( Exception exception )
             {
-                Toast.makeText( Home_page.this, "Could not log in.", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( FacebookLoginActivity.this, "Could not log in.", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

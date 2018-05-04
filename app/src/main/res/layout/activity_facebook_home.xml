@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LINKEDIN"
+            android:text="FACEBOOK"
             android:layout_centerVertical="true"
             android:textColor="#fff"
             android:textStyle="bold"
@@ -31,7 +31,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:onClick="log_out_twitter"
+            android:onClick="log_out_facebook"
             />
 
 
@@ -40,7 +40,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="2"
+        android:weightSum="3"
         android:id="@+id/top_bar"
         android:layout_below="@+id/action_bar"
         android:background="@color/colorAccent"
@@ -58,7 +58,17 @@
             android:textStyle="bold"
             />
 
-
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SEARCH"
+            android:gravity="center"
+            android:padding="10dp"
+            android:onClick="search_timeline"
+            android:textStyle="bold"
+            android:textColor="@color/tw__composer_light_gray"
+            />
 
         <TextView
             android:layout_width="0dp"

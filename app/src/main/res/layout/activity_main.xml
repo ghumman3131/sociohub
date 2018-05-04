@@ -48,7 +48,6 @@
             android:layout_height="50dp"
             android:background="#f4f1f1"
             android:padding="10dp"
-            android:weightSum="4"
             android:id="@+id/add_network_layout"
             android:layout_below="@+id/top_bar">
 
@@ -74,18 +73,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_stream"
-                android:onClick="next_page1"/>
+                />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Add streams"
+                android:text="Scheduled Posts"
                 android:textSize="17dp"
                 android:textColor="#000"
-                android:layout_weight="1"
+
                 android:padding="5dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="show_scheduled"/>
 
 
 
@@ -122,7 +122,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Not logged in"
                     android:id="@+id/facebook_logged_in_as"
                     android:textColor="#000"
                     android:textSize="20sp"
@@ -145,7 +145,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Not logged in"
                     android:id="@+id/instagram_logged_in_as"
                     android:textColor="#000"
                     android:textSize="20sp"
@@ -168,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Not logged in"
                     android:id="@+id/twitter_logged_in_as"
                     android:textColor="#000"
                     android:textSize="20sp"
@@ -191,7 +191,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
+                    android:text="Not logged in"
                     android:id="@+id/linkedin_logged_in_as"
                     android:textColor="#000"
                     android:textSize="20sp"
@@ -233,6 +233,7 @@
             android:padding="10dp"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
+            android:onClick="get_trending"
             />
 
          </LinearLayout>

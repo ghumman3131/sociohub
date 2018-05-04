@@ -1,17 +1,9 @@
 package com.example.hp.sociohub;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
 import android.view.View;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 public class SigninOptionsActivity extends AppCompatActivity {
 
@@ -42,7 +34,7 @@ public class SigninOptionsActivity extends AppCompatActivity {
 
     public void continue_with_facebook(View view) {
 
-        Intent i = new Intent(SigninOptionsActivity.this , Home_page.class);
+        Intent i = new Intent(SigninOptionsActivity.this , FacebookLoginActivity.class);
 
         startActivity(i);
     }

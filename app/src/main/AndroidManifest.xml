@@ -27,7 +27,7 @@
         <activity android:name=".TwitterHome" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SubscribeLayout" />
-        <activity android:name=".Home_page" />
+        <activity android:name=".FacebookLoginActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -51,7 +51,17 @@
         </activity>
         <activity android:name=".TwitterLoginActivity" />
         <activity android:name=".LinkedinLoginActivity" />
-        <activity android:name=".AllAccountPostActivity"></activity>
+        <activity android:name=".AllAccountPostActivity" />
+        <activity android:name=".FacebookHome" />
+
+        <!-- registering the receiver -->
+        <receiver
+            android:name=".ScheduleAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".AllScheduledPostsActivity" />
+        <activity android:name=".TrendingActivity"></activity>
     </application>
 
 </manifest>

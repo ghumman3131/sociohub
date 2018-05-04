@@ -8,26 +8,27 @@ import android.os.Bundle;
 import android.view.View;
 
 
-import com.example.hp.sociohub.fragment.likedin.MakePostFragment;
-
-import com.example.hp.sociohub.fragment.likedin.UserTimeLineFragment;
-import com.linkedin.platform.LISession;
+import com.example.hp.sociohub.fragment.facebook.MakePostFragment;
+import com.example.hp.sociohub.fragment.facebook.SearchTimeLineFragment;
+import com.example.hp.sociohub.fragment.facebook.UserTimeLineFragment;
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 import com.linkedin.platform.LISessionManager;
-import com.twitter.sdk.android.core.TwitterCore;
 
-public class LinkedinHome extends AppCompatActivity {
+public class FacebookHome extends AppCompatActivity {
 
     FragmentManager fm = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_linkedin_home);
+        setContentView(R.layout.activity_facebook_home);
 
-        if(LISessionManager.getInstance(this).getSession().getAccessToken()==null) {
+       if( AccessToken.getCurrentAccessToken()  == null )
+       {
+           startActivity( new Intent(FacebookHome.this , FacebookLoginActivity.class));
+       }
 
-            startActivity(new Intent(this, LinkedinLoginActivity.class));
-        }
 
     }
 
@@ -41,7 +42,13 @@ public class LinkedinHome extends AppCompatActivity {
 
     }
 
+    public void search_timeline(View view) {
 
+        FragmentTransaction ft = fm.beginTransaction();
+
+        ft.replace(R.id.main_frame , new SearchTimeLineFragment()).commit();
+
+    }
 
     public void post_timeline(View view) {
 
@@ -51,13 +58,12 @@ public class LinkedinHome extends AppCompatActivity {
 
     }
 
-    public void log_out_twitter(View view) {
+    public void log_out_facebook(View view) {
 
-        LISessionManager.getInstance(LinkedinHome.this).clearSession();
+        LoginManager.getInstance().logOut();
 
 
         finish();
     }
-
 
 }
